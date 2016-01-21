@@ -10,8 +10,14 @@ describe ("rootFinder", function () {
  });
 });
 
+// describe ("findNotPrimes", function() {
+//   it("will search array to find multiples of our test prime", function() {
+//     expect(findNotPrimes(3, 4, [0,1,2,3,4,5,6,7,8,9,10])).to.eql([6,9]);
+//   });
+// });
+
 describe ("findNotPrimes", function() {
-  it("will search array to find multiples of our test prime", function() {
-    expect(findNotPrimes(3, 4, [0,1,2,3,4,5,6,7,8,9,10])).to.eql([6,9]);
-  });
+ it("will search array to find multiples of our test prime and remove them, leaving holes.", function() {
+   expect(findNotPrimes(3, 4, [0,1,2,3,4,5,6,7,8,9,10])).to.eql([0,1,2,3,4,5,,7,8,,10]);
+ });
 });
