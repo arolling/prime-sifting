@@ -40,3 +40,19 @@ var primeFinder = function(limit) {
  }
 // limitArray.forEach(function(rootLimit)) {
 //   findNotPrimes(XXXXXX, rootLimit, limitArray)
+// END BUSINESS LOGIC
+
+$(document).ready(function() {
+  $("form#inputForm").submit(function(event) {
+    event.preventDefault();
+    var limit = $("input#primeInput").val();
+//    console.log(word)
+
+    var primeList = primeFinder(limit);
+//    console.log(latinWord);
+
+//    console.log(latinPhrase);
+    $("#translatedText").text(primeList);
+
+  });
+});
